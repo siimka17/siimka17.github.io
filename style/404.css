@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+body{
+    background: #000320;
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    margin: 0;
+    color:white;
+}
+.container{
+    max-width: 80%;
+    margin: 0 auto;
+}
+.box{
+    margin:0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding-top: 150px;
+}
+.box__img{
+    max-width:50%;
+    height: auto;
+    z-index:2;
+}
+.buttons__btn{
+	font-family: 'Montserrat', sans-serif;
+	color:white;
+	border:inherit;
+	background-color:inherit;
+	border:solid 1px #FFF;
+	border-radius: 30px;
+	padding: 12px 30px;
+    margin-bottom: 60px;
+}
+.button__btn--animation{
+    text-align: center;
+    text-decoration: none;
+    background: linear-gradient(90deg, red, blue, purple, red);
+    background-size: 400%;
+    border:none;
+  }
+  @keyframes animate {
+    0% {
+      background-position: 0%;
+    }
+    100% {
+      background-position: 400%;
+    }
+  }
+  .hoverbutton:hover {
+    animation: animate 8s linear infinite;
+    border: solid #260094 1px;
+    cursor: pointer;
+  }
+  .box__text{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .box__text__heading1{
+    font-size:150px;
+    margin: 0;
+    text-shadow: 0 0 10px blue,
+               0 0 20px blue, 
+               0 0 40px blue;
+  }
+  .box__text__heading2{
+    text-transform: uppercase;
+  }
+  .box__text__main{
+    margin-bottom:30px;
+  }
+  @media(max-width:960px){
+    .box{
+        flex-direction: column;
+        align-items: center;
+        padding-top: 70px;
+        text-align: center;
+    }
+    .container{
+        max-width: 70%;
+    }
+    .box__text{
+        align-items: center;
+    }
+    .box__img{
+        max-width:100%;
+  }
+  @media(max-width:480px){
+    .box__text__heading1{
+        font-size: 90px;
+    }
